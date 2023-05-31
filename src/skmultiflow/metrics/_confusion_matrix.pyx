@@ -39,9 +39,9 @@ cdef class ConfusionMatrix:
         self.classes = set(range(n_classes))
         self.n_classes = n_classes
         self.sum_diag = 0.0
-        self.sum_row = defaultdict(float_)
-        self.sum_col = defaultdict(float_)
-        self.data = defaultdict(float_)
+        self.sum_row = defaultdict(float)
+        self.sum_col = defaultdict(float)
+        self.data = defaultdict(float)
 
     def __setitem__(self, true_pred_tuple, double sample_weight):
         if not isinstance(true_pred_tuple, tuple):
